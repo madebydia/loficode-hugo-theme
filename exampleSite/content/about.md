@@ -6,7 +6,7 @@ title: "About LofiCode"
 
 LofiCode is a Hugo theme designed for developers, writers, and creatives who appreciate the cozy, nostalgic aesthetic of lo-fi culture combined with modern web functionality.
 
-💻 Star us on [GitHub](https://github.com/raisingpixels/loficode-hugo-theme)!
+💻 Star us on [GitHub](https://github.com/meimakes/loficode-hugo-theme)!
 
 ## The Philosophy
 
@@ -43,7 +43,7 @@ Optimized for speed without sacrificing features or aesthetics.
 
 ## Get Started
 
-Ready to create your own cozy corner of the internet? Check out the [installation guide](https://github.com/raisingpixels/loficode-hugo-theme) and start building your perfect digital space.
+Ready to create your own cozy corner of the internet? Check out the [installation guide](https://github.com/meimakes/loficode-hugo-theme) and start building your perfect digital space.
 
 ---
 

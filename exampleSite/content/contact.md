@@ -8,7 +8,7 @@ Have questions about the LofiCode theme? Want to share how you're using it? We'd
 
 ## Theme Support
 
-For theme-related questions, bug reports, or feature requests, please 🐛 [Report Issues](https://github.com/raisingpixels/loficode-hugo-theme/issues).
+For theme-related questions, bug reports, or feature requests, please 🐛 [Report Issues](https://github.com/meimakes/loficode-hugo-theme/issues).
 
 ## Contributing
 
