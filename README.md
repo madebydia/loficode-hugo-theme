@@ -47,8 +47,11 @@ Add the theme to your `hugo.toml`:
 theme = "loficode"
 
 [params]
-  author = "Your Name"
   description = "Your site description"
+
+  [params.author]
+    name = "Your Name"
+    image = "images/profile.png"
 
   # Profile section
   [params.profile]
