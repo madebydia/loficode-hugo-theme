@@ -1,6 +1,6 @@
 # LofiCode Hugo Theme
 
-Built by [@meimakes](https://x.com/meimakes)
+Built by [@madebydia](https://x.com/madebydia)
 
 A cozy, lo-fi inspired Hugo theme perfect for developers and creatives who want to create a warm, inviting blog with a retro aesthetic and modern functionality.
 
@@ -35,10 +35,10 @@ LofiCode embraces the cozy, nostalgic feeling of lo-fi aesthetics while maintain
 
 ```bash
 # Clone into your Hugo site's themes directory
-git clone https://github.com/meimakes/loficode-hugo-theme.git themes/loficode
+git clone https://github.com/madebydia/loficode-hugo-theme.git themes/loficode
 
 # Or add as a Git submodule
-git submodule add https://github.com/meimakes/loficode-hugo-theme.git themes/loficode
+git submodule add https://github.com/madebydia/loficode-hugo-theme.git themes/loficode
 ```
 
 ### 2. Configure Your Site
@@ -63,8 +63,8 @@ theme = "loficode"
 
   # Social links - Supported platforms: github, twitter, linkedin, email, mastodon, youtube, instagram, facebook
   [params.social]
-    github = "meimakes"
-    twitter = "meimakes"
+    github = "madebydia"
+    twitter = "madebydia"
     # linkedin = "your-linkedin-username"
     # email = "your-email@example.com"
     # mastodon = "https://mastodon.social/@yourusername"
@@ -138,8 +138,8 @@ LofiCode supports multiple social media platforms with beautiful icons. Add any 
 
 ```toml
 [params.social]
-  github = "meimakes"
-  twitter = "meimakes"
+  github = "madebydia"
+  twitter = "madebydia"
   linkedin = "your-linkedin-username"
   email = "contact@example.com"
 ```
@@ -214,7 +214,7 @@ LofiCode is built mobile-first and looks great on:
 
 ```bash
 # Clone the repository
-git clone https://github.com/meimakes/loficode-hugo-theme.git
+git clone https://github.com/madebydia/loficode-hugo-theme.git
 cd loficode-hugo-theme
 
 # Install dependencies (if any)
