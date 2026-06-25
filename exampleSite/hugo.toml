@@ -1,5 +1,5 @@
 baseURL = "https://example.com"
-languageCode = "en-us"
+locale = "en-US"
 title = "LofiCode Hugo Theme"
 theme = "loficode-hugo-theme"
 
@@ -39,7 +39,7 @@ enableEmoji = true
 
   # Social links - Supported platforms: github, twitter, linkedin, email, mastodon, youtube, instagram, facebook
   [params.social]
-    github = "https://github.com/example"
+    github = "https://github.com/madebydia"
     twitter = "https://twitter.com/example"
     # linkedin = "https://linkedin.com/in/example"
     # email = "contact@example.com"

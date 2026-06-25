@@ -14,17 +14,17 @@
       <a
         href="{{ $url }}"
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
         class="social-link"
         title="GitHub"
       >
-        <i class="fab fa-github social-icon"></i>
+        <span class="social-icon">GH</span>
       </a>
       {{ else if eq $name "twitter" }}
       <a
         href="{{ $url }}"
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
         class="social-link"
         title="X (formerly Twitter)"
       >
@@ -34,55 +34,55 @@
       <a
         href="{{ $url }}"
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
         class="social-link"
         title="LinkedIn"
       >
-        <i class="fab fa-linkedin social-icon"></i>
+        <span class="social-icon">in</span>
       </a>
       {{ else if eq $name "email" }}
       <a href="mailto:{{ $url }}" class="social-link" title="Email">
-        <i class="fas fa-envelope social-icon"></i>
+        <span class="social-icon">@</span>
       </a>
       {{ else if eq $name "mastodon" }}
       <a
         href="{{ $url }}"
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
         class="social-link"
         title="Mastodon"
       >
-        <i class="fab fa-mastodon social-icon"></i>
+        <span class="social-icon">M</span>
       </a>
       {{ else if eq $name "youtube" }}
       <a
         href="{{ $url }}"
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
         class="social-link"
         title="YouTube"
       >
-        <i class="fab fa-youtube social-icon"></i>
+        <span class="social-icon">▶</span>
       </a>
       {{ else if eq $name "instagram" }}
       <a
         href="{{ $url }}"
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
         class="social-link"
         title="Instagram"
       >
-        <i class="fab fa-instagram social-icon"></i>
+        <span class="social-icon">◎</span>
       </a>
       {{ else if eq $name "facebook" }}
       <a
         href="{{ $url }}"
         target="_blank"
-        rel="noopener"
+        rel="noopener noreferrer"
         class="social-link"
         title="Facebook"
       >
-        <i class="fab fa-facebook social-icon"></i>
+        <span class="social-icon">f</span>
       </a>
       {{ end }} {{ end }}
     </div>

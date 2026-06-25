@@ -4,7 +4,7 @@ Built by [@madebydia](https://x.com/madebydia)
 
 A cozy, lo-fi inspired Hugo theme perfect for developers and creatives who want to create a warm, inviting blog with a retro aesthetic and modern functionality.
 
-![LofiCode Theme Screenshot](https://raw.githubusercontent.com/raisingpixels/loficode-hugo-theme/master/images/screenshot.png)
+![LofiCode Theme Screenshot](https://raw.githubusercontent.com/madebydia/loficode-hugo-theme/main/images/screenshot.png)
 
 ## ✨ Features
 
@@ -125,7 +125,7 @@ LofiCode supports multiple social media platforms with beautiful icons. Add any 
 
 ### Supported Platforms
 
-- **GitHub** - `github = "your-username"`
+- **GitHub** - `github = "madebydia"`
 - **Twitter/X** - `twitter = "your-username"`
 - **LinkedIn** - `linkedin = "your-linkedin-username"`
 - **Email** - `email = "your-email@example.com"`

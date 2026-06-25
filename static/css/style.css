@@ -1,7 +1,8 @@
-/* Import the full styles from our design */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@400;700&family=JetBrains+Mono:wght@400;500&display=swap');
-
 :root {
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-display: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+    --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+
     /* Light mode - Sunset vaporwave */
     --bg-primary: linear-gradient(135deg, #FFE5B4 0%, #FFCCCB 25%, #DDA0DD 75%, #98D8E8 100%);
     --bg-secondary: rgba(255, 255, 255, 0.85);
@@ -118,7 +119,7 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-sans);
     background: var(--bg-primary);
     background-attachment: fixed;
     color: var(--text-primary);
@@ -203,7 +204,7 @@ nav {
 }
 
 .logo {
-    font-family: 'Orbitron', monospace;
+    font-family: var(--font-display);
     font-size: 1.5rem;
     font-weight: 700;
     background: var(--btn-gradient);
@@ -381,7 +382,7 @@ nav {
     color: var(--text-primary);
     font-size: 1rem;
     outline: none;
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-sans);
 }
 
 #searchInput::placeholder {
@@ -681,7 +682,7 @@ nav {
 }
 
 .x-icon {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-sans);
     font-weight: 700;
     font-style: normal;
 }
@@ -858,7 +859,7 @@ nav {
     font-size: 0.8rem;
     color: var(--text-muted);
     white-space: nowrap;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: var(--font-mono);
 }
 
 .post-subtitle {
@@ -1217,7 +1218,7 @@ a.post-tag {
 }
 
 .code-content {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: var(--font-mono);
     font-size: 0.9rem;
     line-height: 1.6;
     color: var(--text-primary);
@@ -1985,7 +1986,7 @@ footer {
 .highlight pre {
     margin: 0;
     padding: 3.5rem 1rem 1rem 1rem;
-    font-family: 'JetBrains Mono', monospace;
+    font-family: var(--font-mono);
     font-size: 0.9rem;
     line-height: 1.6;
     color: var(--code-text) !important;
@@ -2028,7 +2029,7 @@ footer {
 }
 
 .highlight code {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: var(--font-mono);
     background: transparent !important;
     padding: 0;
     border-radius: 0;
@@ -2706,7 +2707,7 @@ footer {
 .preview-date {
     font-size: 0.8rem;
     color: var(--text-muted);
-    font-family: 'JetBrains Mono', monospace;
+    font-family: var(--font-mono);
 }
 
 .more-posts a {
@@ -2866,7 +2867,7 @@ footer {
 }
 
 .overlay-site-title {
-    font-family: 'Orbitron', monospace;
+    font-family: var(--font-display);
     font-size: 1.2rem;
     font-weight: 700;
     background: var(--btn-gradient);
@@ -3060,7 +3061,7 @@ footer {
 }
 
 .load-more-text {
-    font-family: 'Inter', sans-serif;
+    font-family: var(--font-sans);
 }
 
 .load-more-icon {

@@ -117,7 +117,7 @@
     if (isPlaying && currentSound) {
       muteToggle.classList.remove("muted");
       if (muteIcon) {
-        muteIcon.className = "fas fa-volume-up";
+        muteIcon.textContent = "🔊";
       }
       muteToggle.title = "Mute ambient sounds";
       equalizer.classList.remove("muted");
@@ -125,7 +125,7 @@
     } else {
       muteToggle.classList.add("muted");
       if (muteIcon) {
-        muteIcon.className = "fas fa-volume-mute";
+        muteIcon.textContent = "🔇";
       }
       muteToggle.title = "Play ambient sounds";
       equalizer.classList.add("muted");
@@ -1022,7 +1022,7 @@
       // Create back to home button
       const backButton = document.createElement('button');
       backButton.className = 'back-to-home-btn';
-      backButton.innerHTML = '<i class="fas fa-times"></i>';
+      backButton.textContent = "×";
       backButton.title = 'Back to Home';
       backButton.style.cssText = `
         position: fixed;
@@ -1144,7 +1144,7 @@
               <a href="/" class="overlay-site-title">${siteTitle}</a>
             </div>
             <button class="post-overlay-close" aria-label="Close page">
-              <i class="fas fa-times"></i>
+              <span aria-hidden="true">×</span>
             </button>
           </div>
           <div class="post-layout">
@@ -1263,7 +1263,7 @@
               <a href="/" class="overlay-site-title">${siteTitle}</a>
             </div>
             <button class="post-overlay-close" aria-label="Close post">
-              <i class="fas fa-times"></i>
+              <span aria-hidden="true">×</span>
             </button>
           </div>
           <div class="post-layout">
@@ -1473,13 +1473,13 @@
         const muteIcon = overlayMuteToggle.querySelector("i");
         if (isPlaying) {
           overlayMuteToggle.classList.remove("muted");
-          if (muteIcon) muteIcon.className = "fas fa-volume-up";
+          if (muteIcon) muteIcon.textContent = "🔊";
           overlayMuteToggle.title = "Mute ambient sounds";
           if (overlayEqualizer) overlayEqualizer.classList.remove("muted");
           if (overlayAmbientLabel) overlayAmbientLabel.textContent = `Playing: ${sounds[currentSound].name}`;
         } else {
           overlayMuteToggle.classList.add("muted");
-          if (muteIcon) muteIcon.className = "fas fa-volume-mute";
+          if (muteIcon) muteIcon.textContent = "🔇";
           overlayMuteToggle.title = "Play ambient sounds";
           if (overlayEqualizer) overlayEqualizer.classList.add("muted");
           if (overlayAmbientLabel) overlayAmbientLabel.textContent = `Paused: ${sounds[currentSound].name}`;
@@ -1628,7 +1628,7 @@
       if (isPlaying && currentSound) {
         overlayMuteToggle.classList.remove("muted");
         if (muteIcon) {
-          muteIcon.className = "fas fa-volume-up";
+          muteIcon.textContent = "🔊";
         }
         overlayMuteToggle.title = "Mute ambient sounds";
         overlayEqualizer.classList.remove("muted");
@@ -1636,7 +1636,7 @@
       } else {
         overlayMuteToggle.classList.add("muted");
         if (muteIcon) {
-          muteIcon.className = "fas fa-volume-mute";
+          muteIcon.textContent = "🔇";
         }
         overlayMuteToggle.title = "Play ambient sounds";
         overlayEqualizer.classList.add("muted");

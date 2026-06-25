@@ -1,6 +1,6 @@
 name = "LofiCode"
 license = "MIT"
-licenselink = "https://github.com/madebydia/loficode-hugo-theme/blob/master/LICENSE"
+licenselink = "https://github.com/madebydia/loficode-hugo-theme/blob/main/LICENSE"
 description = "A cozy, lo-fi inspired Hugo theme. Features ambient sounds, dark/light themes, and a retro aesthetic with modern functionality."
 
 # The home page of the theme, where the source can be found.

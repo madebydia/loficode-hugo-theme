@@ -23,7 +23,7 @@ The LofiCode Hugo theme is a modern, developer-focused theme that combines a ret
 - **Hugo**: Static site generator (v0.112.0+)
 - **CSS**: Custom properties, CSS Grid, Flexbox
 - **JavaScript**: Vanilla ES6+ (no frameworks)
-- **Fonts**: Google Fonts (Inter, Orbitron, JetBrains Mono)
+- **Fonts**: System sans-serif and monospace stacks
 - **Audio**: Web Audio API for ambient sounds
 
 ### Design Philosophy
@@ -60,12 +60,11 @@ loficode/
 │   │   ├── ambient-bar.html      # Ambient sound controls
 │   │   ├── post-list-item.html   # Post preview component
 │   │   └── toc.html              # Table of contents
-│   ├── taxonomy/
-│   │   ├── list.html             # Taxonomy listing
-│   │   └── term.html             # Individual term page
 │   ├── 404.html                  # Custom 404 page with search
 │   ├── index.json                # Search index template
-│   └── pages.json                # Pages index template
+│   ├── home.pages.json           # Pages index template
+│   ├── taxonomy.html             # Taxonomy listing
+│   └── term.html                 # Individual term page
 ├── static/
 │   ├── css/
 │   │   └── style.css             # Main stylesheet
@@ -106,7 +105,7 @@ The theme follows Hugo's template lookup order with strategic overrides:
 
 ```html
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}" data-theme="light">
+<html lang="{{ .Site.Language.Locale | default "en" }}" data-theme="light">
 <head>
     {{ partial "head.html" . }}
 </head>
@@ -336,7 +335,7 @@ The theme requires specific Hugo configuration for optimal functionality:
 ```toml
 # hugo.toml
 baseURL = "https://example.com"
-languageCode = "en-us"
+locale = "en-US"
 title = "LofiCode Blog"
 theme = "loficode"
 
@@ -351,7 +350,7 @@ theme = "loficode"
 
   [params.social]
     twitter = "username"
-    github = "username"
+    github = "madebydia"
     linkedin = "username"
 
 [markup]
