@@ -1,3 +1,10 @@
+// Resolve a root-relative path against the site's baseURL (works on subpath deployments)
+function basePath(path) {
+  const base = document.documentElement.getAttribute('data-baseurl') || '/';
+  const b = base.endsWith('/') ? base : base + '/';
+  return path.startsWith('/') ? b.replace(/\/$/, '') + path : path;
+}
+
 // LofiCode Main JavaScript
 
 (function () {
@@ -144,7 +151,7 @@
     }
 
     try {
-      const audio = new Audio(`/audio/${soundType}.mp3`);
+      const audio = new Audio(basePath(`/audio/${soundType}.mp3`));
       audio.loop = true;
       audio.volume = volumeSlider ? volumeSlider.value : 0.3;
 
@@ -521,7 +528,7 @@
     } else {
       // If we're on other pages, try to fetch the homepage to get post data
       try {
-        const response = await fetch("/");
+        const response = await fetch(basePath("/"));
         const html = await response.text();
         const parser = new DOMParser();
         const doc = parser.parseFromString(html, "text/html");
@@ -651,8 +658,9 @@
     toggleSearch();
 
     // Use SPA navigation if available
-    if (window.spa && url.startsWith("/posts/")) {
-      const slug = url.split("/posts/")[1].replace("/", "");
+    const postsPrefix = basePath("/posts/");
+    if (window.spa && url.startsWith(postsPrefix)) {
+      const slug = url.slice(postsPrefix.length).replace("/", "");
       window.spa.showPost(slug, true);
     } else {
       // Fallback to regular navigation
@@ -811,7 +819,7 @@
 
     showLoadingState(soundType);
 
-    const audio = new Audio(`/audio/${soundType}.mp3`);
+    const audio = new Audio(basePath(`/audio/${soundType}.mp3`));
     audio.loop = true;
     audio.volume = volumeSlider ? volumeSlider.value : 0.3;
 
@@ -902,7 +910,7 @@
     detectPageType() {
       // Check if we're on a real post page by looking for post content structure
       const postContent = document.querySelector('.post-layout .post-content .post-body');
-      const isPostURL = window.location.pathname.startsWith('/posts/');
+      const isPostURL = window.location.pathname.startsWith(basePath('/posts/'));
 
       this.isRealPostPage = isPostURL && postContent;
 
@@ -914,7 +922,7 @@
 
     async loadPostsData() {
       try {
-        const response = await fetch("/index.json");
+        const response = await fetch(basePath("/index.json"));
         if (response.ok) {
           this.postsData = await response.json();
           console.log(
@@ -932,7 +940,7 @@
 
     async loadPagesData() {
       try {
-        const response = await fetch("/pages.json");
+        const response = await fetch(basePath("/pages.json"));
         if (response.ok) {
           this.pagesData = await response.json();
           console.log(
@@ -1069,8 +1077,9 @@
       // Only handle SPA routing if we're not on a real post page
       if (!this.isRealPostPage) {
         const path = window.location.pathname;
-        if (path.startsWith("/posts/")) {
-          const slug = path.split("/posts/")[1].replace("/", "");
+        const postsPrefix = basePath("/posts/");
+        if (path.startsWith(postsPrefix)) {
+          const slug = path.slice(postsPrefix.length).replace("/", "");
           if (slug) {
             this.showPost(slug, false);
           }
@@ -1079,7 +1088,8 @@
     }
 
     navigateToPost(href) {
-      const slug = href.split("/posts/")[1].replace("/", "");
+      const postsPrefix = basePath("/posts/");
+      const slug = href.startsWith(postsPrefix) ? href.slice(postsPrefix.length).replace("/", "") : href.split("/posts/")[1]?.replace("/", "");
       this.showPost(slug, true);
     }
 
@@ -1396,7 +1406,7 @@
         link.addEventListener("click", (e) => {
           e.preventDefault();
           const href = link.getAttribute("href");
-          if (href && href.startsWith("/posts/")) {
+          if (href && href.startsWith(basePath("/posts/"))) {
             const slug = href.split("/posts/")[1].replace("/", "");
             this.showPost(slug, true);
           }
@@ -1773,7 +1783,7 @@
 
       try {
         // Fetch posts data from index.json
-        const response = await fetch('/index.json');
+        const response = await fetch(basePath('/index.json'));
         const postsData = await response.json();
 
         // Get the next batch of posts
