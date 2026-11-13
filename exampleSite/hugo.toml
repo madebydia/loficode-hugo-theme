@@ -28,6 +28,7 @@ enableEmoji = true
   pagerSize = 6
   path = "page"
 
+[params]
   demoBanner = true
   description = "A cozy example site showcasing the LofiCode Hugo theme"
   tagline = "Coding with coffee and lo-fi beats ☕🎵"
