@@ -1,0 +1,4 @@
+# Module config for Hugo Themes site builds
+[module]
+  [module.hugoVersion]
+    min = "0.121.0"
